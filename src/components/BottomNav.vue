@@ -1,5 +1,5 @@
 <template>
-  <v-bottom-navigation v-model="value" color="teal" grow>
+  <v-bottom-navigation v-model="value" color="teal" grow hide-on-scroll fixed>
     <v-btn value="home">
       <span>ホーム</span>
 
