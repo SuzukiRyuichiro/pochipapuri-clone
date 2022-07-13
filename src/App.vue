@@ -58,6 +58,34 @@
       </v-card>
     </v-main>
     <bottom-nav />
+    <v-dialog v-model="dialog" width="500">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
+          Click Me
+        </v-btn>
+      </template>
+
+      <v-card>
+        <v-card-title class="text-h5 grey lighten-2">
+          Akita komachi on sale!!!!
+        </v-card-title>
+
+        <v-card-text class="pt-4">
+          At banafi shop, Akita Komachi rice 10kg is now half the price for limited amount! Don't miss out!!!
+        </v-card-text>
+        <div class="d-flex justify-center">
+          <img :src="require('./assets/komachi.jpeg')" alt="komachi" id="komachi">
+        </div>
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="dialog = false">
+            Dismiss
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-app>
 </template>
 
@@ -70,14 +98,20 @@ export default {
   components: {
     BottomNav
   },
+  created() {
+    setTimeout(() => {
+      this.dialog = true
+    }, 10000)
+  },
   data: () => ({
+    dialog: false,
     items: [{
         id: "1",
-        content: '<iframe width="255" height="144" src="https://www.youtube.com/embed/DnFaI4l2bro?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      content: '<iframe width="288" height="162" src="https://www.youtube.com/embed/DnFaI4l2bro?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
       },
       {
         id: "2",
-        content: '<iframe width="255" height="144" src="https://www.youtube.com/embed/nX4JawVHTO4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        content: '<iframe width="288" height="162" src="https://www.youtube.com/embed/nX4JawVHTO4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
       }
     ]
   }),
@@ -120,4 +154,7 @@ export default {
     overflow-y: scroll;
   }
 
+  #komachi {
+    width: 200px;
+  }
 </style>
