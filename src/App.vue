@@ -18,7 +18,7 @@
         </v-carousel-item>
       </v-carousel>
       <h3 class="text-center mb-5">🌸 最近の投稿 🌸</h3>
-      <v-card class="mx-4 mb-16">
+      <v-card class="mx-4 mb-10">
         <v-card-subtitle>
           <v-avatar color="primary" class="mr-2" size="24">
             <img src="https://dbsg.aiu.ac.jp/html/img/100000362" alt="Cheong sensei">
@@ -43,9 +43,19 @@
             style="background-image: url(https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80)">
           </div>
         </div>
-        <v-card-text>イベントを終えて… 【由利本荘市で暮らそう！】 一つの大きなイベントを終えた由利本荘市のナリワイづくり地域おこし協力隊。 少しずつ知り合いも増え、由利本荘市をわたしのまちとして実感してきたようです。
-          これからが本番！</v-card-text>
+        <v-card-text>
+          イベントを終えて… 【由利本荘市で暮らそう！】 一つの大きなイベントを終えた由利本荘市のナリワイづくり地域おこし協力隊。 少しずつ知り合いも増え、由利本荘市をわたしのまちとして実感してきたようです。
+          これからが本番！
+        </v-card-text>
       </v-card>
+
+      <h3 class="text-center mb-5">🌸 AKTのtwitter 🌸</h3>
+      <v-container class="twitter-container mb-16">
+        <a class="twitter-timeline" href="https://twitter.com/akt8_content?ref_src=twsrc%5Etfw">Tweets by
+          akt8_content</a>
+        <script async type="application/javascript" src="https://platform.twitter.com/widgets.js" charset="utf-8">
+        </script>
+      </v-container>
     </v-main>
     <bottom-nav />
   </v-app>
@@ -103,6 +113,11 @@ export default {
     font-size: 24px;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+
+  .twitter-container {
+    height: 400px;
+    overflow-y: scroll;
   }
 
 </style>
