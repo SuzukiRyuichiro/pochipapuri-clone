@@ -12,7 +12,7 @@
         <v-card-title class="justify-center">秋田の天気</v-card-title>
       </v-card>
       <h3 class="text-center mb-5">🌸 お天気カメラ 🌸</h3>
-      <v-carousel height="144px" hide-delimiter-background hide-delimiters cycle class="mb-5">
+      <v-carousel height="144px" hide-delimiter-background hide-delimiters class="mb-5">
         <v-carousel-item v-for="item in items" :key="item.id">
           <div v-html="item.content" class="d-flex justify-center"></div>
         </v-carousel-item>
@@ -50,12 +50,12 @@
       </v-card>
 
       <h3 class="text-center mb-5">🌸 AKTのtwitter 🌸</h3>
-      <v-container class="twitter-container mb-16">
+      <v-card class="twitter-container mb-16 mx-2 rounded">
         <a class="twitter-timeline" href="https://twitter.com/akt8_content?ref_src=twsrc%5Etfw">Tweets by
           akt8_content</a>
         <script async type="application/javascript" src="https://platform.twitter.com/widgets.js" charset="utf-8">
         </script>
-      </v-container>
+      </v-card>
     </v-main>
     <bottom-nav />
   </v-app>
