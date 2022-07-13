@@ -71,7 +71,7 @@
         </v-card-title>
 
         <v-card-text class="pt-4">
-          At banafi shop, Akita Komachi rice 10kg is now half the price for limited amount! Don't miss out!!!
+          At banafi shop, Akita Komachi rice 10kg is now half the price for a limited amount! Don't miss out!!!
         </v-card-text>
         <div class="d-flex justify-center">
           <img :src="require('./assets/komachi.jpeg')" alt="komachi" id="komachi">
@@ -80,8 +80,14 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" text @click="dialog = false">
+          <v-btn color="secondary" text @click="dialog = false">
             Dismiss
+          </v-btn>
+          <v-btn color="primary" text @click="
+            dialog = false
+            window.location.href='https://goo.gl/maps/ZbKjbx9MF9GK8Nxm7'
+          ">
+            Go
           </v-btn>
         </v-card-actions>
       </v-card>
